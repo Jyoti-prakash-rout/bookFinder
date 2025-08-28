@@ -59,15 +59,6 @@ src/
 
 ---
 
-## 🖼️ Screenshots
-
-_Add screenshots here after running the project!_
-
-- Homepage with random history books
-- Search results page
-- Error state (no books found)
-
----
 
 ## 🙋‍♂️ User Persona
 
