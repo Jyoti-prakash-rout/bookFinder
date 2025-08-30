@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { BookContext } from "../context/BookContext";
 import { ScaleLoader } from "react-spinners";
 const SearchBar = () => {
@@ -16,6 +16,12 @@ const SearchBar = () => {
     );
   }
 
+  const searchRef = useRef();
+
+  useEffect(() => {
+    searchRef.current.focus();
+  }, []);
+
   return (
     <>
       <div className="sticky top-0 bg-white p-2 shadow-md">
@@ -25,6 +31,7 @@ const SearchBar = () => {
             placeholder="Search books..."
             value={text}
             onChange={(e) => setText(e.target.value)}
+            ref={searchRef}
             className="border border-blue-400 hover:border-blue-800 rounded-l-lg px-4 py-2 w-64 outline-none"
           />
           <button
